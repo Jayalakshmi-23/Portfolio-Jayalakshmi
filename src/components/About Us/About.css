@@ -1,0 +1,99 @@
+.about-me{
+    font-size:2rem;
+    font-weight: 600;
+    color:var(--orange);
+}
+.details{
+    font-size:2.5rem;
+    color:var(--dark-blue);
+    font-weight:600;
+
+}
+
+.description--about{
+    font-size: 16px;
+    color: #6f6b80;
+    width:90%;
+    margin:0 auto;
+}
+.skill-section{
+    margin-top:3rem;
+    margin-bottom:3rem;
+}
+.personal-details{
+    margin-top:3rem;
+}
+.experience-items{
+    margin-top:30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:2rem;
+    row-gap:2rem;
+    justify-content: space-between;
+}
+.experience-item{
+    -webkit-box-flex: 0;
+    flex: 0 0 48%;
+    max-width:48%;
+}
+.experience-items .experience-item .experience-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.experience-item .experience-info p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #15295f;
+    opacity: 0;
+    -webkit-animation: showText 0.5s 1s linear forwards;
+    animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+.experience-item .progress-line {
+    margin-top: 7px;
+    height: 10px;
+    width: 100%;
+    background-color: #cdcdcd;
+    position: relative;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    border-radius: 50px;
+}
+.experience-item .progress-line span {
+    border-radius: 50px;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    background-color: #fd6e0a;
+    transition: 1s all;
+    left:0;
+}
+@keyframes animate {
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@media screen and (max-width:991px) {
+    .experience-item{
+        -webkit-box-flex: 0;
+        flex: 0 0 90%;
+        max-width:90%;
+        margin:0 auto;
+    }
+}

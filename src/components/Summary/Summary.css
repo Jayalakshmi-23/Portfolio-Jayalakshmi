@@ -1,0 +1,15 @@
+.summary{
+    padding-bottom: 3rem;
+    /* background-color: #fdf8f7; */
+    background-color: var(--dark-blue);
+}
+.info-box{
+    background-color:rgb(31, 29, 43,0.5);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+}
+.name--info{
+    font-size:16px;
+}
+.duration-time{
+    font-size:16px;
+}
