@@ -1,8 +1,10 @@
 import React from 'react'
 import "./Hero.css"
 import {FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
+import Mailto from "react-mailto-link";
 
 const Hero = () => {
+  
   return (
     <div className='hero-section' id="home">
         <div className='sub-section'>
@@ -19,12 +21,11 @@ const Hero = () => {
                       <a href="https://github.com/Jayalakshmi-23" target="_blank"><FaGithub /></a>
                     </div>
                     <div className='contact-icon'>
-                      <a href="mailto:jayakalimuthu23@gmail.com" target="_blank"><FaEnvelope /></a>
+                      {/* <a rel="nofollow" href={`mailto:{jayakalimuthu23@gmail.com}`} target="_blank"><FaEnvelope /></a> */}
+                      <Mailto email="jayakalimuthu23@gmail.com" obfuscated={true}><FaEnvelope /></Mailto>
                     </div>
                 </div>
-                {/* <div className='contact-btn'>
-                    <button className='btn'>Contact</button>
-                </div> */}
+               
             </div>
         </div>    
     </div>

@@ -1,6 +1,5 @@
 .summary{
     padding-bottom: 3rem;
-    /* background-color: #fdf8f7; */
     background-color: var(--dark-blue);
 }
 .info-box{
@@ -12,4 +11,10 @@
 }
 .duration-time{
     font-size:16px;
+}
+.my-header{
+    font-size: 25px;
+}
+.pos-header{
+    font-size:20px;
 }

@@ -96,4 +96,10 @@
         max-width:90%;
         margin:0 auto;
     }
+    .about-me {
+        font-size:2.7rem;
+    }
+    .details{
+        font-size:3rem;
+    }
 }

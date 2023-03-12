@@ -23,7 +23,7 @@ const Contact = () => {
         <div className=''>
         <div className='contact--message '>
             <h2 className='about-me'>Contact</h2>
-            <p>Please fill out the form on this section to contact with me.</p>
+            <p className='form-fill'>Please fill out the form on this section to contact with me.</p>
             <p className='details'>Let's Connect</p>
         </div>
         <div className='contact-form w-75 mx-auto'>
