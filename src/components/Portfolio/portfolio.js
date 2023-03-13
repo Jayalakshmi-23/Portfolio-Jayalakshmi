@@ -37,9 +37,9 @@ const Portfolio = () => {
                   <img  src={port.image} className="image-port" />
                   <div className="portfolio--header">
                       <div className='context-box text-white w-100 h-100 d-flex justify-content-center align-items-center flex-column p-2'>
-                          <h3>{port.Title}</h3>
-                          <p >{port.description}</p>
-                          <a href={port.GitLink} target="_blank"><FaGithub className='fs-1 text-white text-decoration-none' /></a>
+                          <h3 className='PortTitle'>{port.Title}</h3>
+                          <p className='portDes'>{port.description}</p>
+                          <a href={port.GitLink} target="_blank"><FaGithub className='text-white text-decoration-none portIcon' /></a>
                       </div>
                   </div>
                 </div>

@@ -45,4 +45,12 @@ ul{
 .image-width:hover .portfolio--header{
     height:100%;
 }
-
+.PortTitle{
+    font-size:30px;
+}
+.portDes{
+    font-size:16px;
+}
+.portIcon{
+    font-size:40px;
+}

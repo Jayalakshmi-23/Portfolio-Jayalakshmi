@@ -57,7 +57,7 @@ export const heroData = [
       image:Calender,
       tag:"Javascript",
       Title:"Calender",
-      description:"Calender App is created using HTML, CSS, Javascript",
+      description:"The JavaScript Calender is a control to display date and days of the week. It provides month, year and decade view options to quickly navigate to the desired date. HTML, CSS and JavaScript is supported to enhance this application.",
       GitLink:"https://javascript-calender-app.netlify.app"
     },
     {
@@ -65,7 +65,7 @@ export const heroData = [
       image:FoodApp,
       tag:"React",
       Title:"Food Delivery App",
-      description:"Food Delivery app App is created using React Js with firebase database",
+      description:"This Project is created using React appication to order food.data are managed with Context API and firebase database. Local storage in the browser is established to store data cart items.",
       GitLink:"https://jayalakshmi-23.github.io/ReactJs-Food-Delivery-App/"
     },
     {
@@ -73,7 +73,7 @@ export const heroData = [
       image:Mapty,
       tag:"Javascript",
       Title:"Mapty App",
-      description:"Mapty App is created using HTML, CSS, Javascript",
+      description:"A Map application is made with Vanilla JavaScript to store workouts such as running and cycling for the user in its desired locations and update it in geolocational website",
       GitLink:"https://javascript-mapty-app.netlify.app"
     },
     {
@@ -81,7 +81,7 @@ export const heroData = [
       image:OneNote,
       tag:"Javascript",
       Title:"One Note",
-      description:"One Note App is created using HTML, CSS, Javascript",
+      description:"This application is created to save the quick informations. One Note App is created using HTML, CSS and Javascript. Data is managed in local storage and It performs deletion and edit operations.",
       GitLink:"https://javascript-one-note.netlify.app"
     },
     {
@@ -97,7 +97,7 @@ export const heroData = [
       image:Forkify,
       tag:"Javascript",
       Title:"Forkify App",
-      description:"Forkify App is created using HTML, CSS, Javascript",
+      description:"It is basic web application which is used as guide to cook one's favourite dish.In this website users can search over 1,00,000 recipes. this website is created using HTML, CSS, JavaScript etc,...",
       GitLink:"https://forkify-jayalakshmi.netlify.app"
     }
   ]

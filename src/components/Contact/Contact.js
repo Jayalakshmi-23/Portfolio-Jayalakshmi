@@ -1,9 +1,31 @@
 import React, {useRef, useState,useEffect} from 'react'
 import "./Contact.css";
 import emailjs from '@emailjs/browser';
+import {FaArrowUp} from "react-icons/fa";
 
 const Contact = () => {
   let formRef = useRef("");
+ 
+  const [visible, setVisible] = useState(false)
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 100){
+      setVisible(true)
+    } 
+    else if (scrolled <= 100){
+      setVisible(false)
+    }
+  };
+  
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  };
+  
+  window.addEventListener('scroll', toggleVisible);
 
   const submitInputHandler = function(e){
     e.preventDefault();
@@ -44,6 +66,11 @@ const Contact = () => {
     <div className='footer copy--right'>
             <span>© Jayalakshmi Kalimuthu, 2023 — built with ReactJs</span>
       </div>
+      {visible && 
+        <div className='scrollTop' onClick={scrollToTop} >
+            <FaArrowUp className='arrowUp' />
+        </div>
+      }
     </footer>
   )
 }
