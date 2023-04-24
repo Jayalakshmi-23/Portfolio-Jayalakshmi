@@ -48,7 +48,7 @@ const Contact = () => {
             <p className='form-fill'>Please fill out the form on this section to contact with me.</p>
             <p className='details'>Let's Connect</p>
         </div>
-        <div className='contact-form w-75 mx-auto'>
+        <div className='contact-form mx-auto'>
         <form className='form' ref={formRef} onSubmit={submitInputHandler}>
             <input type="text" className='input-control' placeholder="Your Name" name='user_name'  />
             <input type="email" className='input-control'  placeholder="Your Email" name='user_email' />

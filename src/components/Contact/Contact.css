@@ -4,16 +4,19 @@
    padding:1rem 2rem;
    display: block;
    border: 2px solid #eeeeee;
-   font-size:1rem;
+   font-size:16px;
 }
 .form .input-control:focus {
     outline: none;
     border-color: #fd6e0a;
 }
 .form-fill{
-    font-size:1.2rem;
+    font-size:16px;
     color:var(--background-dark);
     font-weight: 500;
+}
+.contact-form{
+    width:90%;
 }
 .contact--message h4, .contact-form h4{
     color:var(--dark-blue);
@@ -51,8 +54,8 @@
 }
 .scrollTop{
     position: fixed;
-    bottom: 50px;
-    right: 40px;
+    bottom:4rem;
+    right:3rem;
     background-color:var(--orange);
     padding: 0.7rem;
     border-radius: 50%;
@@ -62,4 +65,9 @@
 .scrollTop .arrowUp{
     font-size:1.5rem;
     color:#fff;
+}
+@media screen and (max-width:991px) {
+ .scrollTop{
+     display: none;
+ }   
 }

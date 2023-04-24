@@ -15,7 +15,7 @@ const Hero = () => {
                 <div className='d-flex gap-4 justify-content-center align-items-center'>
                 <div className='contact-icons d-flex gap-2'>
                     <div className='contact-icon'>
-                      <a href="https://www.linkedin.com/in/jayalakshmi-k-86511921b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWLUeJhEYR6q5qRQAy4h22w%3D%3D" target="_blank"><FaLinkedin /></a>
+                      <a href="https://www.linkedin.com/in/jayalakshmi23?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkZsEYJVlTieLB1kpsN767w%3D%3D" target="_blank"><FaLinkedin /></a>
                     </div>
                     <div className='contact-icon'>
                       <a href="https://github.com/Jayalakshmi-23" target="_blank"><FaGithub /></a>

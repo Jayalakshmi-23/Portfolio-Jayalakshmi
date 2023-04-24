@@ -57,7 +57,7 @@ const Header = () => {
               </ul>
             </nav>
             <div className="nav-btn">
-              <a href="Jaya Resume V1.pdf" download="Jaya Resume V1.pdf"><button className="btn">Download CV</button></a>
+              <a href="Jaya Resume Updated V1.pdf" download="Jaya Resume Updated V1.pdf"><button className="btn">Download CV</button></a>
             </div>
           </div>
         </div>
