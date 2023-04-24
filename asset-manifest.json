@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Jayalakshmi/static/css/main.18bc5b99.css",
-    "main.js": "/Portfolio-Jayalakshmi/static/js/main.406a8277.js",
+    "main.css": "/Portfolio-Jayalakshmi/static/css/main.9a1451cc.css",
+    "main.js": "/Portfolio-Jayalakshmi/static/js/main.e648e7a3.js",
     "static/media/calender.jpg": "/Portfolio-Jayalakshmi/static/media/calender.52848652bd0b5378e210.jpg",
     "static/media/forkify.PNG": "/Portfolio-Jayalakshmi/static/media/forkify.99b0052b7fd5bfecd493.PNG",
     "static/media/2.png": "/Portfolio-Jayalakshmi/static/media/2.5f0213122fa7decf3c40.png",
@@ -9,11 +9,11 @@
     "static/media/maptyapp.PNG": "/Portfolio-Jayalakshmi/static/media/maptyapp.39b54c57dcf7e42ac84f.PNG",
     "static/media/foodapp.PNG": "/Portfolio-Jayalakshmi/static/media/foodapp.94ee512db0effa74cdd7.PNG",
     "index.html": "/Portfolio-Jayalakshmi/index.html",
-    "main.18bc5b99.css.map": "/Portfolio-Jayalakshmi/static/css/main.18bc5b99.css.map",
-    "main.406a8277.js.map": "/Portfolio-Jayalakshmi/static/js/main.406a8277.js.map"
+    "main.9a1451cc.css.map": "/Portfolio-Jayalakshmi/static/css/main.9a1451cc.css.map",
+    "main.e648e7a3.js.map": "/Portfolio-Jayalakshmi/static/js/main.e648e7a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.18bc5b99.css",
-    "static/js/main.406a8277.js"
+    "static/css/main.9a1451cc.css",
+    "static/js/main.e648e7a3.js"
   ]
 }
