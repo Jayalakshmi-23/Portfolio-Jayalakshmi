@@ -4,53 +4,165 @@ ul{
 
 .portfolio{
     padding:4rem 0;
+    background:
+      radial-gradient(circle at 82% 8%, rgba(253,110,10,0.06), transparent 42%),
+      radial-gradient(circle at 12% 92%, rgba(21,41,95,0.05), transparent 42%);
+}
+
+/* filter tabs */
+.work-list-ul{
+    gap:10px;
+    flex-wrap:wrap;
+    margin:1.5rem 0 2.5rem;
 }
 .work-list-ul li{
-    padding:10px 15px;
-    color:var(--dark-blue);
+    padding:8px 22px;
+    color:var(--text);
     font-size:16px;
     font-weight: 500;
     cursor: pointer;
+    border-radius:50px;
+    border:2px solid transparent;
+    transition: all 0.25s ease;
+}
+.work-list-ul li:hover{
+    border-color:rgba(253,110,10,0.4);
 }
 .c-pointer.active{
-    color: var(--orange);
-}
-.image-port{
-    width:auto;
-    transform: scale(1);
-    transition: transform 0.2s ease;
-    height:295px;
-    object-fit: cover;
+    color: var(--white);
+    background: var(--accent);
 }
 
-.image-width{
-    width:370px;
-    overflow: hidden;
-    height:100%;
-    cursor: pointer;
-    margin:10px;
-    position: relative;
+/* project cards */
+.port-card{
+    width:360px;
+    max-width:100%;
+    margin:14px;
+    background:var(--surface);
+    border:1px solid var(--border-color);
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    box-shadow:var(--card-shadow);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
-.portfolio--header{
-    position: absolute;
-    top:0;
-    left:0;
-    background-color: rgb(253, 110, 10, 0.8);
-    backdrop-filter:blur(10px);
+.port-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(21,41,95,0.22);
+}
+.port-img-wrap{
+    position:relative;
+    overflow:hidden;
+    height:210px;
+}
+.image-port{
     width:100%;
-    height:0;
-    transition: height 0.4s ease-in-out;
-    overflow: hidden;
-}
-.image-width:hover .portfolio--header{
     height:100%;
+    object-fit:cover;
+    transition:transform 0.45s ease;
+}
+.port-card:hover .image-port{
+    transform:scale(1.08);
+}
+.port-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(21,41,95,0.55), transparent 55%);
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    padding:14px;
+    opacity:0;
+    transition:opacity 0.3s ease;
+}
+.port-card:hover .port-overlay{
+    opacity:1;
+}
+.port-link{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--accent);
+    color:var(--white);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.05rem;
+    text-decoration:none;
+    transform:translateY(-10px);
+    transition:transform 0.3s ease, box-shadow 0.25s ease;
+    box-shadow:0 8px 18px rgba(253,110,10,0.4);
+}
+.port-card:hover .port-link{
+    transform:translateY(0);
+}
+.port-link:hover{
+    transform:translateY(-3px) scale(1.05);
+}
+.port-body{
+    padding:1.3rem 1.4rem 1.5rem;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+.port-cat{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:0.5rem;
 }
 .PortTitle{
-    font-size:30px;
+    font-size:1.4rem;
+    color:var(--heading);
+    font-weight:700;
+    margin-bottom:0.6rem;
 }
 .portDes{
-    font-size:16px;
+    font-size:14px;
+    color:var(--text-muted);
+    line-height:1.6;
+    margin-bottom:1.1rem;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
 }
-.portIcon{
-    font-size:40px;
+.port-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem;
+    margin-top:auto;
+}
+.port-tag{
+    font-size:12px;
+    font-weight:500;
+    color:var(--text);
+    background:var(--bg);
+    border:1px solid var(--border-color);
+    border-radius:50px;
+    padding:4px 12px;
+}
+
+@media screen and (max-width:768px){
+    .portfolio{
+        padding:3rem 0;
+    }
+    .port-card{
+        width:100%;
+        max-width:400px;
+        margin:12px auto;
+    }
+    .PortTitle{
+        font-size:1.9rem;
+    }
+    .portDes{
+        font-size:1.4rem;
+    }
+    .port-cat, .port-tag{
+        font-size:1.2rem;
+    }
 }

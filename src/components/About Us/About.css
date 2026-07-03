@@ -1,24 +1,164 @@
 .about-me{
     font-size:2rem;
     font-weight: 600;
-    color:var(--orange);
+    color:var(--accent);
 }
 .details{
     font-size:2.5rem;
-    color:var(--dark-blue);
+    color:var(--heading);
     font-weight:600;
-
+    position: relative;
+    padding-bottom: 16px;
+    display: inline-block;
+}
+.details::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:60px;
+    height:3px;
+    border-radius:3px;
+    background:var(--accent);
 }
 
 .description--about{
     font-size: 16px;
-    color: #6f6b80;
+    color: var(--text-muted);
     width:90%;
     margin:0 auto;
+}
+.about-highlights{
+    list-style:none;
+    padding:0;
+    margin:2.5rem auto 0;
+    max-width:960px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1rem 2rem;
+    text-align:left;
+}
+.about-highlights li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    background:var(--surface);
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:1rem 1.2rem;
+    font-size:15px;
+    color:var(--text-muted);
+    line-height:1.5;
+    box-shadow:var(--card-shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.about-highlights li:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--card-shadow);
+}
+.highlight-icon{
+    color:var(--accent);
+    flex-shrink:0;
+    font-size:1.1rem;
+    margin-top:2px;
 }
 .skill-section{
     margin-top:3rem;
     margin-bottom:3rem;
+}
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.5rem;
+    max-width:1000px;
+    margin:2.5rem auto 0;
+}
+.skill-card{
+    background:var(--surface);
+    border:1px solid var(--border-color);
+    border-radius:16px;
+    padding:1.6rem;
+    text-align:left;
+    box-shadow:var(--card-shadow-sm);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+.skill-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--card-shadow);
+}
+.skill-card-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.1rem;
+    font-weight:700;
+    color:var(--heading);
+    margin-bottom:1.1rem;
+    padding-bottom:0.7rem;
+    border-bottom:2px solid var(--border-color);
+}
+.skill-card-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    border-radius:10px;
+    background:rgba(253,110,10,0.12);
+    color:var(--accent);
+    font-size:1.05rem;
+}
+.skill-chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem;
+}
+.skill-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--text);
+    background:rgba(253,110,10,0.08);
+    border:1px solid rgba(253,110,10,0.25);
+    border-radius:50px;
+    padding:6px 14px 6px 10px;
+    transition:background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.skill-chip-icon{
+    display:flex;
+    align-items:center;
+    font-size:1.05rem;
+    color:var(--accent);
+    transition:color 0.25s ease;
+}
+.skill-chip:hover{
+    background:var(--accent);
+    color:var(--white);
+    transform:translateY(-2px);
+}
+.skill-chip:hover .skill-chip-icon{
+    color:var(--white);
+}
+@media screen and (max-width:991px){
+    .skills-grid{
+        grid-template-columns:1fr;
+        max-width:500px;
+    }
+    .skill-card-title{
+        font-size:1.7rem;
+    }
+    .skill-chip{
+        font-size:1.4rem;
+    }
+}
+@media screen and (max-width:768px){
+    .about-highlights{
+        grid-template-columns:1fr;
+        max-width:100%;
+    }
 }
 .personal-details{
     margin-top:3rem;
@@ -48,7 +188,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    color: #15295f;
+    color: var(--heading);
     opacity: 0;
     -webkit-animation: showText 0.5s 1s linear forwards;
     animation: showText 0.5s 1s linear forwards;
@@ -62,7 +202,7 @@
     margin-top: 7px;
     height: 10px;
     width: 100%;
-    background-color: #cdcdcd;
+    background-color: var(--progress-track);
     position: relative;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -78,7 +218,7 @@
     position: absolute;
     -webkit-transform-origin: left;
     transform-origin: left;
-    background-color: #fd6e0a;
+    background-color: var(--accent);
     transition: 1s all;
     left:0;
 }

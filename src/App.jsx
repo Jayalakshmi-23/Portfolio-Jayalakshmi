@@ -5,6 +5,8 @@ import Hero from './components/HeroSection/Hero';
 import Portfolio from './components/Portfolio/portfolio';
 import Contact from './components/Contact/Contact';
 import Summary from './components/Summary/Summary';
+import Reveal from './components/Reveal/Reveal';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 
 function App() {
   return (
@@ -13,10 +15,11 @@ function App() {
         <Header />
         <Hero />
     </div>
-    <About />
-    <Summary />
-    <Portfolio />
-    <Contact />
+    <Reveal><About /></Reveal>
+    <Reveal><Summary /></Reveal>
+    <Reveal><Portfolio /></Reveal>
+    <Reveal><Contact /></Reveal>
+    <ScrollTop />
     </div>
   );
 }

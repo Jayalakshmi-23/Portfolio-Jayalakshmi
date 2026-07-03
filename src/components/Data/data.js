@@ -58,6 +58,7 @@ export const heroData = [
       tag:"Javascript",
       Title:"Calender",
       description:"The JavaScript Calender is a control to display date and days of the week. It provides month, year and decade view options to quickly navigate to the desired date. HTML, CSS and JavaScript is supported to enhance this application.",
+      tech:["HTML","CSS","JavaScript"],
       GitLink:"https://javascript-calender-app.netlify.app"
     },
     {
@@ -65,7 +66,8 @@ export const heroData = [
       image:FoodApp,
       tag:"React",
       Title:"Food Delivery App",
-      description:"This Project is created using React appication to order food.data are managed with Context API and firebase database. Local storage in the browser is established to store data cart items.",
+      description:"An interactive e-commerce platform built with ReactJS and Tailwind CSS that uses browser Local Storage for robust cart state persistence and handles live menu data via custom Firebase context configurations.",
+      tech:["React","Firebase","Tailwind CSS","React Router"],
       GitLink:"https://jayalakshmi-23.github.io/ReactJs-Food-Delivery-App/"
     },
     {
@@ -74,6 +76,7 @@ export const heroData = [
       tag:"Javascript",
       Title:"Mapty App",
       description:"A Map application is made with Vanilla JavaScript to store workouts such as running and cycling for the user in its desired locations and update it in geolocational website",
+      tech:["JavaScript","OOP","Geolocation","Leaflet"],
       GitLink:"https://javascript-mapty-app.netlify.app"
     },
     {
@@ -82,6 +85,7 @@ export const heroData = [
       tag:"Javascript",
       Title:"One Note",
       description:"This application is created to save the quick informations. One Note App is created using HTML, CSS and Javascript. Data is managed in local storage and It performs deletion and edit operations.",
+      tech:["HTML","CSS","JavaScript","LocalStorage"],
       GitLink:"https://javascript-one-note.netlify.app"
     },
     {
@@ -90,6 +94,7 @@ export const heroData = [
       tag:"React",
       Title:"Calender",
       description:"Calender App is created using HTML, CSS, Javascript",
+      tech:["HTML","CSS","JavaScript"],
       GitLink:"https://javascript-mapty-app.netlify.app"
     },
     {
@@ -97,7 +102,8 @@ export const heroData = [
       image:Forkify,
       tag:"Javascript",
       Title:"Forkify App",
-      description:"It is basic web application which is used as guide to cook one's favourite dish.In this website users can search over 1,00,000 recipes. this website is created using HTML, CSS, JavaScript etc,...",
+      description:"A modern recipe web application hosting over 1,000,000 dishes. Built with HTML, SCSS, JavaScript and Parcel, it dynamically scales ingredient amounts relative to the user-selected serving size.",
+      tech:["HTML","SCSS","JavaScript","Parcel"],
       GitLink:"https://forkify-jayalakshmi.netlify.app"
     }
   ]

@@ -5,21 +5,87 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body, html{
   font-size:16px;
   font-family: 'Poppins', sans-serif;
   width:100%;
+}
+body{
   overflow-x: hidden;
+}
+button{
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.scrollTop{
+  transition: transform 0.25s ease;
+}
+.scrollTop:hover{
+  transform: translateY(-4px);
 }
 
 :root {
+	/* brand constants (same across themes) */
 	--white : #FFFFFF;
 	--orange : #fd6e0a;
 	--dark-blue : #15295f;
 	--background-dark : #1f1d2b;
 	--black : #000;
-  --border: 2px solid #eeeeee;
   --border-radius:50px;
+
+  /* semantic tokens — light theme (default) */
+  --bg: #f9f9fc;
+  --surface: #ffffff;
+  --heading: #14224f;
+  --text: #3a3f52;
+  --text-muted: #6b7280;
+  --accent: #fd6e0a;
+  --border-color: #e7e9f0;
+  --border: 2px solid var(--border-color);
+  --footer-bg: #fff3ee;
+  --progress-track: #e8e8f0;
+  --summary-bg: #15295f;
+  --hero-gradient-start: #fff1e8;
+  --hero-gradient-end: #f9f9fc;
+  --card-shadow: 0 10px 30px rgba(21,41,95,0.08);
+  --card-shadow-sm: 0 4px 16px rgba(21,41,95,0.06);
+  --header-bg: rgba(249,249,252,0.72);
+  --page-gradient:
+    radial-gradient(1100px circle at 100% -5%, rgba(253,110,10,0.07), transparent 40%),
+    radial-gradient(1000px circle at 0% 20%, rgba(21,41,95,0.05), transparent 38%);
+  }
+
+  [data-theme="dark"] {
+  --bg: #14121c;
+  --surface: #24222f;
+  --heading: #ffffff;
+  --text: #e8e8f0;
+  --text-muted: #a5a1b5;
+  --accent: #fd6e0a;
+  --border-color: #33313f;
+  --footer-bg: #1f1d2b;
+  --progress-track: #3a3846;
+  --summary-bg: #0e0d16;
+  --hero-gradient-start: #201d2b;
+  --hero-gradient-end: #14121c;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  --card-shadow-sm: 0 4px 16px rgba(0,0,0,0.28);
+  --header-bg: rgba(20,18,28,0.72);
+  --page-gradient:
+    radial-gradient(1100px circle at 100% -5%, rgba(253,110,10,0.06), transparent 40%),
+    radial-gradient(1000px circle at 0% 20%, rgba(99,116,255,0.05), transparent 38%);
+  }
+
+  body {
+    background-color: var(--bg);
+    background-image: var(--page-gradient);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   @media only screen and (max-width:1400px){

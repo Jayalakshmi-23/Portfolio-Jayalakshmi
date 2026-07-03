@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {portfolio, tags} from "../Data/data";
 import "./portfolio.css";
-import {FaGithub} from 'react-icons/fa';
+import {FaExternalLinkAlt} from 'react-icons/fa';
 
 
 const Portfolio = () => {
@@ -29,18 +29,28 @@ const Portfolio = () => {
         }
       </ul>
 
-      <div className='d-flex justify-content-center align-items-center flex-wrap'>
+      <div className='d-flex justify-content-center align-items-stretch flex-wrap'>
         {
           filterImages.map(function(port) {
               return  (
-                <div key={port.id} className="image-width">
-                  <img  src={port.image} className="image-port" />
-                  <div className="portfolio--header">
-                      <div className='context-box text-white w-100 h-100 d-flex justify-content-center align-items-center flex-column p-2'>
-                          <h3 className='PortTitle'>{port.Title}</h3>
-                          <p className='portDes'>{port.description}</p>
-                          <a href={port.GitLink} target="_blank"><FaGithub className='text-white text-decoration-none portIcon' /></a>
-                      </div>
+                <div key={port.id} className="port-card">
+                  <div className="port-img-wrap">
+                    <img src={port.image} alt={port.Title} className="image-port" />
+                    <div className="port-overlay">
+                      <a href={port.GitLink} target="_blank" rel="noreferrer" aria-label={`Open ${port.Title}`} className="port-link">
+                        <FaExternalLinkAlt />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="port-body">
+                    <span className="port-cat">{port.tag}</span>
+                    <h3 className='PortTitle'>{port.Title}</h3>
+                    <p className='portDes'>{port.description}</p>
+                    <div className="port-tags">
+                      {(port.tech || []).map((t) => (
+                        <span className="port-tag" key={t}>{t}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )

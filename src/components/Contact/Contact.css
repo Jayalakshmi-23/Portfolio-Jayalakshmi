@@ -1,25 +1,137 @@
+.contact-footer{
+    background:
+      radial-gradient(circle at 15% 20%, rgba(253,110,10,0.08), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(21,41,95,0.08), transparent 45%);
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2.5rem;
+    max-width:1000px;
+    margin:3rem auto 0;
+    align-items:stretch;
+}
+.contact-info{
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+}
+.contact-info-title{
+    font-size:1.7rem;
+    font-weight:700;
+    color:var(--heading);
+    margin-bottom:0.8rem;
+}
+.contact-info-sub{
+    font-size:16px;
+    color:var(--text-muted);
+    margin-bottom:2rem;
+    line-height:1.6;
+}
+.contact-detail-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+}
+.contact-detail-list li{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+.detail-icon{
+    flex-shrink:0;
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.2rem;
+    color:var(--white);
+    background:var(--accent);
+    box-shadow:0 8px 18px rgba(253,110,10,0.3);
+}
+.detail-label{
+    display:block;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--text-muted);
+    margin-bottom:2px;
+}
+.contact-detail-list a,
+.detail-value{
+    color:var(--heading);
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    transition:color 0.2s ease;
+}
+.contact-detail-list a:hover{
+    color:var(--accent);
+}
+.contact-socials{
+    display:flex;
+    gap:14px;
+    margin-top:auto;
+}
+.contact-socials a{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.3rem;
+    color:var(--heading);
+    background:var(--surface);
+    border:1px solid var(--border-color);
+    transition:transform 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.contact-socials a:hover{
+    transform:translateY(-4px);
+    color:var(--accent);
+    border-color:var(--accent);
+}
+.form .input-control:first-child{
+   margin-top:0;
+}
 .form .input-control{
    margin-top:1rem;
    width:100%;
    padding:1rem 2rem;
    display: block;
-   border: 2px solid #eeeeee;
+   border: 2px solid var(--border-color);
+   background-color: var(--surface);
+   color: var(--text);
    font-size:16px;
+}
+.form .input-control::placeholder{
+    color: var(--text-muted);
 }
 .form .input-control:focus {
     outline: none;
-    border-color: #fd6e0a;
+    border-color: var(--accent);
 }
 .form-fill{
     font-size:16px;
-    color:var(--background-dark);
+    color:var(--heading);
     font-weight: 500;
 }
 .contact-form{
-    width:90%;
+    width:100%;
+    margin:0;
+    background:var(--surface);
+    border:1px solid var(--border-color);
+    border-radius:20px;
+    padding:2.5rem;
+    box-shadow:var(--card-shadow);
 }
 .contact--message h4, .contact-form h4{
-    color:var(--dark-blue);
+    color:var(--heading);
     font-weight: bold;
 }
 .form textarea {
@@ -30,16 +142,44 @@
 .primary-btn {
     margin-top:1.5rem;
 }
+.form .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.form-status {
+    margin-top: 1rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+.form-status.success {
+    color: #1a7f37;
+}
+.form-status.error {
+    color: #d1242f;
+}
 
 .footer{
-    height:4rem;
+    min-height:4rem;
     width: 100%;
-    background-color: #ffeeea;
+    background-color: var(--footer-bg);
     text-align: center;
     line-height:4rem;
-    color:var(--dark-blue);
+    color:var(--text);
     font-weight: 500;
     font-size:1rem;
+}
+@media screen and (max-width:768px){
+    .footer{
+        line-height:1.6;
+        padding:1.2rem 1rem;
+        font-size:1.4rem;
+    }
+    .contact-form{
+        padding:1.8rem 1.4rem;
+    }
+    .contact-info-title{
+        font-size:2.2rem;
+    }
 }
 .msg{
     position: absolute;
@@ -56,7 +196,7 @@
     position: fixed;
     bottom:4rem;
     right:3rem;
-    background-color:var(--orange);
+    background-color:var(--accent);
     padding: 0.7rem;
     border-radius: 50%;
     cursor: pointer;
@@ -69,5 +209,19 @@
 @media screen and (max-width:991px) {
  .scrollTop{
      display: none;
- }   
+ }
+ .contact-grid{
+     grid-template-columns:1fr;
+     gap:2rem;
+ }
+ .contact-info{
+     text-align:center;
+ }
+ .contact-detail-list li{
+     justify-content:center;
+     text-align:left;
+ }
+ .contact-socials{
+     justify-content:center;
+ }
 }
